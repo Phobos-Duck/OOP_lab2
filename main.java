@@ -7,14 +7,8 @@ class Main {
         System.out.println("Введите ваш пароль: ");
         String password = scanner.nextLine();
 
-        while (password.length() < 8)
-        {
-            System.out.println("Ваш пароль меньше 8 символов. Попробуйте ввести ещё раз");
-            password = scanner.nextLine();
-        }
-
-        double password_check = Functions.check_password(password);
-        if (password_check == 1)
+        boolean password_check = Functions.check_password(password);
+        if (password_check)
         {
             System.out.println("Пароль соответствует");
         }
